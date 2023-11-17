@@ -341,8 +341,32 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONg-sC-9Hu">
                                 <rect key="frame" x="23" y="55" width="235" height="42"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="58c-w7-ve6">
+                                        <rect key="frame" x="15" y="11.999999999999996" width="20" height="18.333333333333336"/>
+                                        <color key="tintColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="64w-Y2-yQS"/>
+                                            <constraint firstAttribute="height" constant="20" id="won-fh-ocK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Cryptocurrency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiQ-QP-ecd">
+                                        <rect key="frame" x="40" y="8.6666666666666643" width="194" height="25"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="PJc-hA-MHn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UiQ-QP-ecd" secondAttribute="trailing" constant="1" id="5O3-GY-5bj"/>
+                                    <constraint firstItem="UiQ-QP-ecd" firstAttribute="centerY" secondItem="ONg-sC-9Hu" secondAttribute="centerY" id="QFA-dX-s8U"/>
+                                    <constraint firstItem="UiQ-QP-ecd" firstAttribute="leading" secondItem="58c-w7-ve6" secondAttribute="trailing" constant="5" id="VNe-6K-sl4"/>
+                                    <constraint firstItem="58c-w7-ve6" firstAttribute="centerY" secondItem="ONg-sC-9Hu" secondAttribute="centerY" id="gji-cn-zi9"/>
+                                    <constraint firstItem="58c-w7-ve6" firstAttribute="leading" secondItem="ONg-sC-9Hu" secondAttribute="leading" constant="15" id="nkl-Kf-gIw"/>
                                     <constraint firstAttribute="height" constant="42" id="tfN-uy-bpw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -419,7 +443,7 @@
                                             <constraint firstAttribute="height" constant="45" id="qKr-ru-4FQ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-RY-VxF">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-RY-VxF">
                                         <rect key="frame" x="79" y="20" width="35" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="uKc-7W-Ev8"/>
@@ -438,8 +462,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$55,000 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rli-VP-7Dg">
-                                        <rect key="frame" x="213" y="20" width="112" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$55,000.0 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rli-VP-7Dg">
+                                        <rect key="frame" x="198" y="20" width="127" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="o7Q-2S-lN6"/>
                                         </constraints>
@@ -499,11 +523,12 @@
                                 <color key="textColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.031372549019607843" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I4Y-1V-vj3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I4Y-1V-vj3">
                                 <rect key="frame" x="24" y="336" width="345" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="crh-j1-tOM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ONg-sC-9Hu" firstAttribute="leading" secondItem="6xD-b0-cz7" secondAttribute="leading" constant="23" id="1DB-gH-CRv"/>
@@ -607,6 +632,7 @@
         <image name="filter" width="4" height="3"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="launch" width="19" height="19.666666030883789"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="mask_green" width="317" height="52.666667938232422"/>
         <image name="metaverse" width="169" height="168"/>
         <image name="purse" width="16" height="16"/>

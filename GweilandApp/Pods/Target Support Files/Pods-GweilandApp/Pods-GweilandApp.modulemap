@@ -1,0 +1,6 @@
+framework module Pods_GweilandApp {
+  umbrella header "Pods-GweilandApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -18,7 +18,6 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-Ds-irK">
                         <rect key="frame" x="0.0" y="10" width="45" height="45"/>
-                        <color key="backgroundColor" red="1" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="MhM-Pd-zDq"/>
                             <constraint firstAttribute="height" constant="45" id="bXd-fC-KkL"/>
@@ -68,25 +67,33 @@
                         <color key="textColor" red="1" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="UWL-y0-DT1">
+                        <rect key="frame" x="0.0" y="10" width="45" height="45"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vtp-Ng-OJM" firstAttribute="top" secondItem="xnG-mG-wbr" secondAttribute="top" id="2VF-Dc-C17"/>
                     <constraint firstAttribute="trailing" secondItem="d0B-oL-eOv" secondAttribute="trailing" id="50e-EC-Ll7"/>
                     <constraint firstItem="vtp-Ng-OJM" firstAttribute="leading" secondItem="xnG-mG-wbr" secondAttribute="trailing" constant="15" id="6ZF-zo-jYZ"/>
                     <constraint firstItem="VuX-Ee-zHt" firstAttribute="top" secondItem="xnG-mG-wbr" secondAttribute="bottom" constant="4" id="8oV-uY-1T1"/>
+                    <constraint firstItem="UWL-y0-DT1" firstAttribute="centerX" secondItem="Jv5-Ds-irK" secondAttribute="centerX" id="B8o-eo-7cK"/>
+                    <constraint firstItem="UWL-y0-DT1" firstAttribute="top" secondItem="Jv5-Ds-irK" secondAttribute="top" id="EwM-KT-V9y"/>
                     <constraint firstAttribute="bottom" secondItem="Jv5-Ds-irK" secondAttribute="bottom" constant="10" id="F7P-be-nPK"/>
                     <constraint firstItem="9s4-1U-PVU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GX8-wn-nvP"/>
                     <constraint firstItem="xnG-mG-wbr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Imv-1a-svX"/>
                     <constraint firstItem="VuX-Ee-zHt" firstAttribute="leading" secondItem="Jv5-Ds-irK" secondAttribute="trailing" constant="10" id="IsI-Ng-Yx7"/>
+                    <constraint firstItem="UWL-y0-DT1" firstAttribute="leading" secondItem="Jv5-Ds-irK" secondAttribute="leading" id="Mx0-QG-HBq"/>
                     <constraint firstItem="Jv5-Ds-irK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="N0O-D9-lxt"/>
                     <constraint firstItem="d0B-oL-eOv" firstAttribute="top" secondItem="9s4-1U-PVU" secondAttribute="bottom" constant="4" id="eTY-fD-amg"/>
                     <constraint firstAttribute="trailing" secondItem="9s4-1U-PVU" secondAttribute="trailing" id="iBz-AY-hYG"/>
                     <constraint firstItem="Jv5-Ds-irK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jXK-mP-eec"/>
                     <constraint firstItem="xnG-mG-wbr" firstAttribute="leading" secondItem="Jv5-Ds-irK" secondAttribute="trailing" constant="10" id="lMD-sS-Cmn"/>
+                    <constraint firstItem="UWL-y0-DT1" firstAttribute="centerY" secondItem="Jv5-Ds-irK" secondAttribute="centerY" id="ls8-U7-UI2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="activityIndicator" destination="UWL-y0-DT1" id="ZXl-cd-mPa"/>
                 <outlet property="coinImage" destination="Jv5-Ds-irK" id="eP2-un-01P"/>
                 <outlet property="coinrateLabel" destination="9s4-1U-PVU" id="DTZ-Qa-evc"/>
                 <outlet property="gainGraphImage" destination="vtp-Ng-OJM" id="LTV-Pv-Ir6"/>
